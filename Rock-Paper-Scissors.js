@@ -13,60 +13,65 @@ return Math.floor(Math.random() * 3);
 console.log("Rock Paper Scissors Game");
 console.log("Round "+ gameRound);
 
-/*Create a function getHumanChoice*/
-
-function getHumanChoice() {
-    let getHumanChoice = prompt("Choose your option: rock paper scissors");
-    return getHumanChoice.toLowerCase();
-}
-
-/*Create a function getComputerChoice*/
-
-function getComputerChoice(numericalChoice) {
-
-if (numericalChoice === 0) {
-    return "rock";
-}else if (numericalChoice === 1) {
-    Return "paper";
-} else {
-    Return "scissors";
-}
-}
-
-/*Create Variables humanScore and computerScore*/
-
-int humanScore;
-int computerScore;
 
 
 /*Assign value of 0 to humanScore and to computerScore*/
 
-let computerScore = 0;
-return computerScore;
-let humanScore = 0;
-return humanScore;
+let computerScore;
+computerScore = 0;
+let humanScore;
+humanScore = 0;
+let getHumanChoice;
 
 /*Create function playRound*/
 
-function playRound() {
     if(gameRound <= 6) {
-        if(getComputerChoice = getHumanChoice){
+
+        /*Create a function getHumanChoice*/
+
+    getHumanChoice = prompt("Choose your option: rock, paper, scissors");
+
+
+/*Create a function getComputerChoice*/
+
+        if (numericalChoice === 0) {
+            getComputerChoice = "rock";
+        }else if (numericalChoice === 1) {
+    getComputerChoice = "paper";
+        } else {
+        getComputerChoice = "scissors";
+}
+
+
+/*Create Variables humanScore and computerScore*/
+console.log(getComputerChoice);
+console.log(getHumanChoice);
+
+        if(getComputerChoice === getHumanChoice){
             console.log("It's a draw!")
         } else {
-            if(getComputerChoice === "rock" && getComputerChoice === "scissor") {
+            if(getComputerChoice === "rock" && getHumanChoice === "scissors") {
+                console.log("You chose: " + getHumanChoice);
+                console.log("The computer chose: " + getComputerChoice);
                 console.log("Computer won this round");
                 gameRound++;
                 computerScore++;
-            } else if(getComputerChoice === "scissor" && getHumanChoice === "paper") {
+            } else if(getComputerChoice === "scissors" && getHumanChoice === "paper") {
+                console.log("You chose: " + getHumanChoice);
+                console.log("The computer chose: " + getComputerChoice);
                 console.log("Computer won this round");
                 gameRound++;
                 computerScore++;
-            } else if(getComputerChoice === "paper" && getHumanChoice === "scissor") {
+            } else if(getComputerChoice === "paper" && getHumanChoice === "scissors") {
+                console.log("You chose: " + getHumanChoice);
+                console.log("The computer chose: " + getComputerChoice);
                 console.log("Computer won this round");
                 gameRound++;
                 computerScore++;
             }else{
-                console.log("Computer won this round");
+                console.log("You chose: " + getHumanChoice);
+                console.log("The computer chose: " + getComputerChoice);
+                console.log("You won this round");
                 gameRound++;
                 humanScore++;
                 }
@@ -83,5 +88,5 @@ function playRound() {
             console.log("Congratulations you won")
         }
         }
-        }
+
     
