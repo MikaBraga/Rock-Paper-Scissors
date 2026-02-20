@@ -4,23 +4,13 @@ START
 
 Create a function gameRound = 1
 
-Create a function math.random() 
+Create a function numericalChoice
 
-Create a function string getHumanChoice
+Print Start Game Message
 
-Create a function string getComputerChoice
+Create a function getHumanChoice
 
-Assign to getComputedChoice 0 for rock, 1 for paper and 2 for scissors
-
-Print "Rock Paper Scissors Game"
-
-Print "Round" + gameRound
-
-Print "Choose your option: Rock, Paper, Scissors: "
-
-Assign value input for humanChoice
-
-Transform humanChoice in lowercase
+Create a function getComputerChoice
 
 Create Variables humanScore and computerScore
 
