@@ -2,11 +2,19 @@ PSEUDOCODE
 
 START
 
-Create a list with "Rock" "Paper" and "Scissors" choices
+Create a function gameRound = 1
 
-Create a function getComputerChoice
+Create a function math.random() 
 
-Create a function getHumanChoice
+Create a function string getHumanChoice
+
+Create a function string getComputerChoice
+
+Assign to getComputedChoice 0 for rock, 1 for paper and 2 for scissors
+
+Print "Rock Paper Scissors Game"
+
+Print "Round" + gameRound
 
 Print "Choose your option: Rock, Paper, Scissors: "
 
@@ -16,27 +24,25 @@ Transform humanChoice in lowercase
 
 Create Variables humanScore and computerScore
 
-Assign value of 0 to humanScore computerScore
-
-Create a variable playGame
-
-Set variable playGame to 0
+Assign value of 0 to humanScore and to computerScore
 
 Create function playRound
 
-Return a random list value for getComputerChoice
+Create value string winner
 
-Return value from user
+Compare getHumanChoice and getComputerChoice
 
-Sum 1 to playGame every end of Playround
+Define if it's a draw or not
 
-Define the round winner
+If there is a winner assign the winner and add to their score & Add +1 to gameRound
 
-Increment humanScore or computerScore based on winner
+Print Computer Choice
 
-Return the winner of the round
+Print Human Choice
 
-Print the Winner
+Print Winner
+
+Restart Game
 
 END
 
