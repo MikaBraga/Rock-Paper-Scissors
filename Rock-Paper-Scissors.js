@@ -1,21 +1,15 @@
-/*Create a value gameRound = 1*/
+/* Initialise game round counter */
 
 let gameRound = 1;
 
-/*Create a function numericalChoice*/ 
 
-function numericalChoice() {
-return Math.floor(Math.random() * 3);
-}
 
-/* Print Start Game Message*/
+/* Display start game message */
 
 console.log("Rock Paper Scissors Game");
-console.log("Round "+ gameRound);
 
 
-
-/*Assign value of 0 to humanScore and to computerScore*/
+/* Initialise scores for human and computer */
 
 let computerScore;
 computerScore = 0;
@@ -23,30 +17,35 @@ let humanScore;
 humanScore = 0;
 let getHumanChoice;
 
-/*Create function playRound*/
+/* Start game loop for 5 rounds */
 
-    if(gameRound <= 6) {
+while(gameRound <= 5) {
 
-        /*Create a function getHumanChoice*/
+/* Generate random number for computer choice */
+
+let numericalChoice;
+numericalChoice =  Math.floor(Math.random() * 3);
+
+    console.log("Round "+ gameRound);
+
+/* Ask user for their choice */
 
     getHumanChoice = prompt("Choose your option: rock, paper, scissors");
 
 
-/*Create a function getComputerChoice*/
+/* Determine computer choice based on random number */
 
         if (numericalChoice === 0) {
             getComputerChoice = "rock";
         }else if (numericalChoice === 1) {
-    getComputerChoice = "paper";
+            getComputerChoice = "paper";
+        } else if (numericalChoice === 2){
+            getComputerChoice = "scissors";    
         } else {
-        getComputerChoice = "scissors";
+            getComputerChoice = "invalid";
 }
 
-
-/*Create Variables humanScore and computerScore*/
-console.log(getComputerChoice);
-console.log(getHumanChoice);
-
+/* Compare choices and choose the round winner*/
         if(getComputerChoice === getHumanChoice){
             console.log("It's a draw!")
         } else {
@@ -56,29 +55,51 @@ console.log(getHumanChoice);
                 console.log("Computer won this round");
                 gameRound++;
                 computerScore++;
+
             } else if(getComputerChoice === "scissors" && getHumanChoice === "paper") {
                 console.log("You chose: " + getHumanChoice);
                 console.log("The computer chose: " + getComputerChoice);
                 console.log("Computer won this round");
                 gameRound++;
                 computerScore++;
-            } else if(getComputerChoice === "paper" && getHumanChoice === "scissors") {
+
+            } else if(getComputerChoice === "paper" && getHumanChoice === "rock") {
                 console.log("You chose: " + getHumanChoice);
                 console.log("The computer chose: " + getComputerChoice);
                 console.log("Computer won this round");
                 gameRound++;
                 computerScore++;
-            }else{
+
+            }else if(getComputerChoice === "rock" && getHumanChoice === "paper") {
                 console.log("You chose: " + getHumanChoice);
                 console.log("The computer chose: " + getComputerChoice);
                 console.log("You won this round");
                 gameRound++;
                 humanScore++;
+
+            } else if(getComputerChoice === "scissors" && getHumanChoice === "rock") {
+                console.log("You chose: " + getHumanChoice);
+                console.log("The computer chose: " + getComputerChoice);
+                console.log("You won this round");
+                gameRound++;
+                humanScore++;
+
+            } else if(getComputerChoice === "paper" && getHumanChoice === "scissors") {
+                console.log("You chose: " + getHumanChoice);
+                console.log("The computer chose: " + getComputerChoice);
+                console.log("You won this round");
+                gameRound++;
+                humanScore++;
+
+            }else{
+                console.log("Error");
                 }
          }
          console.log("Your score: " + humanScore);
          console.log("Computer's score: " + computerScore);
-    } else {
+        }
+
+      /* Finish game and announce final winner */
         console.log("Game finished");
         console.log("Your Score: " + humanScore);
         console.log("Computer's score: " + computerScore);
@@ -87,6 +108,6 @@ console.log(getHumanChoice);
         } else {
             console.log("Congratulations you won")
         }
-        }
+        
 
     

@@ -2,37 +2,23 @@ PSEUDOCODE
 
 START
 
-Create a function gameRound = 1
+Initialise game round counter
 
-Create a function numericalChoice
+Display start game message
 
-Print Start Game Message
+Initialise scores for human and computer
 
-Create a function getHumanChoice
+Start game loop for 5 rounds
 
-Create a function getComputerChoice
+Generate random number for computer choice
 
-Create Variables humanScore and computerScore
+Ask user for their choice
 
-Assign value of 0 to humanScore and to computerScore
+Determine computer choice based on random number
 
-Create function playRound
+Compare choices and choose the round winner
 
-Create value string winner
-
-Compare getHumanChoice and getComputerChoice
-
-Define if it's a draw or not
-
-If there is a winner assign the winner and add to their score & Add +1 to gameRound
-
-Print Computer Choice
-
-Print Human Choice
-
-Print Winner
-
-Restart Game
+Finish game and announce final winner
 
 END
 
